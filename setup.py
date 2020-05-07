@@ -18,14 +18,14 @@ def get_requirements( req ):
 	return install_requires
 
 setuptools.setup(
-	name = 'python-markdown-ext-type-hint',
+	name = 'pymdown-typehint',
 	version = '0.1.0',
 	author = 'Max Hegler',
 	author_email = 'maxghegler@gmail.com',
 	description = 'A Python-Markdown extension for styling variable types in-line',
 	long_description = get_description(),
 	long_description_content_type = 'text/markdown',
-	url = 'https://github.com/mghweb/python-markdown-ext-type-hint',
+	url = 'https://github.com/mghweb/pymdown-typehint',
 	packages = setuptools.find_packages(),
 	license = 'MIT License',
 	classifiers = [
@@ -38,5 +38,8 @@ setuptools.setup(
 		'Topic :: Text Processing :: Markup :: HTML'
 	],
 	python_requires = '>3.0',
-	install_requires = get_requirements( 'requirements.txt' )
+	install_requires = get_requirements( 'requirements.txt' ),
+	entry_points = {
+		'markdown.extensions': [ 'typehint = typehint.typehint:TypeHintExtension' ]
+	}
 )
