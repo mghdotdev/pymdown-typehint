@@ -38,8 +38,5 @@ setuptools.setup(
 		'Topic :: Text Processing :: Markup :: HTML'
 	],
 	python_requires = '>3.0',
-	install_requires = get_requirements( 'requirements.txt' ),
-	entry_points = {
-		'typehint': [ 'extension.typehint:TypeHintExtension' ]
-	}
+	install_requires = get_requirements( 'requirements.txt' )
 )
