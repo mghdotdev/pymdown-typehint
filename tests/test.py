@@ -1,6 +1,6 @@
 import markdown
 import os
-from typehint.typehint import TypeHintExtension
+from ..typehint import TypeHintExtension
 
 CURRENT_DIR = os.path.abspath( os.path.dirname( __file__ ) )
 
