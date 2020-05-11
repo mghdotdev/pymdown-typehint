@@ -4,4 +4,4 @@ An extension for [Python-Markdown](https://python-markdown.github.io). Replaces 
 
 ## Example Output
 
-![example-output](docs/images/example-output.png)
+![example_output](docs/images/example_output.png)
