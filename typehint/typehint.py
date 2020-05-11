@@ -3,7 +3,7 @@ from markdown.inlinepatterns import InlineProcessor
 import xml.etree.ElementTree as etree
 
 DEFAULT_COLOR = '#999'
-RE_TYPEHINT_INLINE = r'\[@([a-zA-Z]+)\]'
+RE_TYPEHINT_INLINE = r'\[@([a-zA-Z]+)\s?([^\]]*)?\]'
 
 def getTypeColor( ty, config ):
 
@@ -57,9 +57,11 @@ class TypeHintPattern( InlineProcessor ):
 		el = m.group( 0 )
 
 		matchedType = m.group( 1 )
+		customText = m.group( 2 )
+		innerText = customText if customText else matchedType
 
 		if matchedType:
-			el = generateTag( matchedType, getTypeColor( matchedType, self.config ), self.config )
+			el = generateTag( innerText, getTypeColor( matchedType, self.config ), self.config )
 
 		return el, m.start( 0 ), m.end( 0 )
 

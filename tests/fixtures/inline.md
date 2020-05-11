@@ -1,4 +1,4 @@
-# Example Output
+# Example Output (inline)
 
 ## Uppercase
 
@@ -47,3 +47,19 @@
 [@object]
 [@regexp]
 [@string]
+
+## Custom
+
+[@any any]
+[@array \[\]]
+[@boolean true]
+[@class MyClass]
+[@date myDate]
+[@element HTMLElement]
+[@float 4.32]
+[@function myFunction]
+[@int 32]
+[@number myNumber]
+[@object {}]
+[@regexp myRegex]
+[@string 'testing']
