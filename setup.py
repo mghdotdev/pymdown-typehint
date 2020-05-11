@@ -19,7 +19,7 @@ def get_requirements( req ):
 
 setuptools.setup(
 	name = 'pymdown-typehint',
-	version = '0.1.0',
+	version = '0.2.0',
 	author = 'Max Hegler',
 	author_email = 'maxghegler@gmail.com',
 	description = 'A Python-Markdown extension for styling variable types in-line',
